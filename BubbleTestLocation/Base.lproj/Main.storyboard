@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BubbleTestLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bor-Lh-Os6">
+                                <rect key="frame" x="114" y="298" width="147" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILx-7G-zyU" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-eN-NKt">
+                                <rect key="frame" x="16" y="60" width="107" height="30"/>
+                                <state key="normal" title="Find bubble tea"/>
+                                <connections>
+                                    <action selector="FindAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zSe-wu-Dm2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xTz-eN-NKt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="4cr-f1-cPU"/>
+                            <constraint firstItem="ILx-7G-zyU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7tG-dw-ST3"/>
+                            <constraint firstItem="xTz-eN-NKt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Crx-K4-ATY"/>
+                            <constraint firstItem="ILx-7G-zyU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DtD-Hb-QFR"/>
+                            <constraint firstItem="ILx-7G-zyU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="KPh-vo-84j"/>
+                            <constraint firstItem="ILx-7G-zyU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NCD-1j-6aq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ILx-7G-zyU" secondAttribute="trailing" id="dRE-JK-Jxf"/>
+                            <constraint firstItem="xTz-eN-NKt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="fbA-Bj-KRt"/>
+                            <constraint firstItem="ILx-7G-zyU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hfe-2D-Lgo"/>
+                            <constraint firstItem="xTz-eN-NKt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="il2-NP-pSa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ILx-7G-zyU" id="zYF-Bb-bC2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
